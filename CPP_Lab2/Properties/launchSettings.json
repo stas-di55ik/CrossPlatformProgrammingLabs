@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CPP_Lab2": {
+      "commandName": "Project",
+      "commandLineArgs": "-i \"C:\\Users\\User\\Desktop\\НАВЧАННЯ\\4 курс\\1 семестр\\Кросплатформне програмування\\CrossPlatformProgramming\\CPP_Lab2\\Files\\INPUT.txt\" -o \"C:\\Users\\User\\Desktop\\НАВЧАННЯ\\4 курс\\1 семестр\\Кросплатформне програмування\\CrossPlatformProgramming\\CPP_Lab2\\Files\\OUTPUT.txt\""
+    }
+  }
+}
