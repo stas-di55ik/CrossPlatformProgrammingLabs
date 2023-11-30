@@ -1,0 +1,76 @@
+﻿﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12" align="center">
+        <h1 style="margin-top:100px">Привіт, тут ви можете запустити лабораторні роботи 1-3</h1>
+
+        <style>
+            body {
+                text-align: center;
+            }
+
+            table {
+                width: 70%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        </style>
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <h3 style="color:green;margin-top:50px">Доступні ресурси:</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Команда</th>
+                        <th>Опис</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="/Labs/Lab1">Перейти</a> </td>
+                        <td>Словесні квадрати</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="/Labs/Lab2">Перейти</a> </td>
+                        <td>Підрахунок потенційних паліндромів у заданому рядку</td>
+
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="/Labs/Lab3">Перейти</a> </td>
+                        <td>Атракціон "Лабіринт знань"</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        }
+        else
+        {
+            <h3 style="color:red;margin-top:50px">Вам потрібно увійти, аби отримати доступ</h3>
+        }
+
+    </div>
+</div>
