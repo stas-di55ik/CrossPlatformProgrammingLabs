@@ -29,24 +29,32 @@ M (0 ≤ M ≤ 10000) – кількість дверей. У кожному з 
             <p>
                 <b>Приклад:</b>
             </p>
+            <p>
+                <b>INPUT</b>
+            </p>
             <pre>
-INPUT.TXT   OUTPUT.TXT
-2 2         5
+2 2
 1 2 5
 1 2 -5
             </pre>
+            <p>
+                <b>OUTPUT</b>
             </p>
-            <h2>Вхідні дані</h2>
+            <pre>
+5
+            </pre>
+            </p>
+            <h2>Результат роботи</h2>
             <form method="POST">
+                <br />
+                <label>Вхідні дані:</label><br />
+                <textarea name="inputString" rows="3" cols="50">@ViewBag.Input</textarea>
+                <br />
+                <label>Вихідні дані:</label><br/>
+                <textarea rows="1" cols="50" id="resultField">@ViewBag.Result</textarea>
                 <br/>
-                <label>Input file path:</label><br />
-                <input type="text" name="input_file" />
                 <br/>
-                <label>Output file path:</label><br />
-                <input type="text" name="output_file" />
-                <br/>
-                <br/>
-                <input type='submit' value='Виконати' />
+                <input type='submit' value='Виконати'/>
             </form>
         </div>
     </div>

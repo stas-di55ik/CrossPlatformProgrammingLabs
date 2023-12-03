@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-using ClassLibraryLab4;
+using ClassLibraryLab5;
 
 namespace Lab5WebApp.Controllers
 {
@@ -15,8 +15,13 @@ namespace Lab5WebApp.Controllers
 
         [Authorize]
         [HttpPost]
-        public void Lab1(string input_file, string output_file) => ClassLibraryLab4.ClassLab1.Execute(input_file, output_file);
-
+        public IActionResult Lab1(string inputString)
+        {
+            ViewBag.Input = inputString;
+            List<string> result = ClassLab1.Execute(inputString);
+            ViewBag.Result = result;
+            return View();
+        }
 
         [Authorize]
         public IActionResult Lab2()
@@ -26,8 +31,13 @@ namespace Lab5WebApp.Controllers
 
         [Authorize]
         [HttpPost]
-        public void Lab2(string input_file, string output_file) => ClassLibraryLab4.ClassLab2.Execute(input_file, output_file);
-
+        public IActionResult Lab2(string inputString)
+        {
+            ViewBag.Input = inputString;
+            string result = ClassLab2.Execute(inputString).ToString();
+            ViewBag.Result = result;
+            return View();
+        }
 
         [Authorize]
         public IActionResult Lab3()
@@ -37,7 +47,12 @@ namespace Lab5WebApp.Controllers
 
         [Authorize]
         [HttpPost]
-        public void Lab3(string input_file, string output_file) => ClassLibraryLab4.ClassLab3.Execute(input_file, output_file);
-
+        public IActionResult Lab3(string inputString)
+        {
+            ViewBag.Input = inputString;
+            string result = ClassLab3.Execute(inputString);
+            ViewBag.Result = result;
+            return View();
+        }
     }
 }

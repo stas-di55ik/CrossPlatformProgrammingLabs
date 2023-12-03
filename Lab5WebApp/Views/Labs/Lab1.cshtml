@@ -26,30 +26,46 @@
             <p>
                 <b>Приклад:</b>
             </p>
+            <p>
+                <b>INPUT</b>
+            </p>
             <pre>
-INPUT.TXT   OUTPUT.TXT
-4           CRAB
-ARTS        RARE
-BEST        ARTS
-CRAB        BEST
+4
+ARTS
+BEST
+CRAB
 DATE
-FIND        FIND
-IDEA        IDEA
-NEXT        NEXT
-RARE        DATE
+FIND
+IDEA
+NEXT
+RARE
+            </pre>
+            <p>
+                <b>OUTPUT</b>
+            </p>
+            <pre>
+CRAB
+RARE
+ARTS
+BEST
+
+FIND
+IDEA
+NEXT
+DATE
             </pre>
             </p>
-            <h2>Вхідні дані</h2>
+            <h2>Результат роботи</h2>
             <form method="POST">
-                <br/>
-                <label>Шлях до вхідного файлу:</label><br/>
-                <input type="text" name="input_file"/>
-                <br/>
-                <label>Шлях до вихідного файлу:</label><br />
-                <input type="text" name="output_file"/>
-                <br/>
-                <br/>
-                <input type='submit' value='Виконати'/>
+                <br />
+                <label>Вхідні дані:</label><br />
+                <textarea name="inputString" rows="9" cols="50">@ViewBag.Input</textarea>
+                <br />
+                <label>Вихідні дані:</label><br />
+                <textarea rows="9" cols="50" id="resultField">@((ViewBag.Result != null) ? string.Join(Environment.NewLine, (List<string>)ViewBag.Result) : "")</textarea>
+                <br />
+                <br />
+                <input type='submit' value='Виконати' />
             </form>
         </div>
     </div>

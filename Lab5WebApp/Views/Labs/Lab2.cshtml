@@ -20,22 +20,32 @@
             <p>
                 <b>Приклад:</b>
             </p>
+            </p>
+            <p>
+                <b>INPUT</b>
+            </p>
             <pre>
-INPUT.TXT   OUTPUT.TXT
-AAA         7
-BAOBAB      22
+AAA
+BAOBAB
+            </pre>
+            <p>
+                <b>OUTPUT</b>
+            </p>
+            <pre>
+7
+22
             </pre>
             </p>
-            <h2>Вхідні дані</h2>
+            <h2>Результат роботи</h2>
             <form method="POST">
-                <br/>
-                <label>Input file path:</label><br/>
-                <input type="text" name="input_file"/>
-                <br/>
-                <label>Output file path:</label><br/>
-                <input type="text" name="output_file"/>
-                <br/>
-                <br/>
+                <br />
+                <label>Вхідні дані:</label><br />
+                <textarea name="inputString" rows="1" cols="50">@ViewBag.Input</textarea>
+                <br />
+                <label>Вихідні дані:</label><br />
+                <textarea rows="1" cols="50" id="resultField">@ViewBag.Result</textarea>
+                <br />
+                <br />
                 <input type='submit' value='Виконати' />
             </form>
         </div>
