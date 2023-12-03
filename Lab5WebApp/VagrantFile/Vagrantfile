@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     rm packages-microsoft-prod.deb
     sudo apt-get update && sudo apt-get install -y dotnet-sdk-6.0
 	
-	dotnet add package LibsLab4 --version 1.0.0 --source http://192.168.0.103:5555/v3/index.json
+	dotnet add package LibsLab5 --version 1.0.0 --source http://192.168.0.103:5555/v3/index.json
 
 	sudo apt-get install -y git
 	git clone https://github.com/stas-di55ik/CrossPlatformProgrammingLabs.git
